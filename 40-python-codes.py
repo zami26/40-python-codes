@@ -369,3 +369,75 @@ def reverse(num):
  
 n = int(input("enter a number : "))
 print(f"{n} in Reversed :{reverse(n)}")
+
+
+ 
+# 21.Write a program to Find 2nd large number.
+ 
+def find_largest(n):
+    unique_Num = list(set(n))
+    if len(unique_Num) < 2:
+        return "There is no largest Number"
+    unique_Num.sort(reverse=True)
+    return unique_Num[1]
+ 
+Num = list(map(int,input("Enter numbers separated by spaces: ").split()))
+ 
+Second_large = find_largest(Num)
+print(f"The second largest number is : {Second_large}")
+ 
+ 
+ 
+ 
+ 
+# 22-> write a programme to sort a list in ascending/descending order
+ 
+"""
+Num = list(map(int,input("Enter numbers separated by spaces: ").split()))
+ 
+Num.sort()
+print(f"The ascending ordered number lis is ={Num} ")
+ 
+"""
+ 
+Num = list(map(int,input("Enter numbers separated by spaces: ").split()))
+ 
+Num.sort(reverse=True)
+print(f"The descending ordered number lis is ={Num} ")
+ 
+ 
+ 
+ 
+ 
+# 23-> write a programme to merge two list
+ 
+Num1 = list(map(int,input("Enter numbers separated by spaces: ").split()))
+Num2 = list(map(int,input("Enter numbers separated by spaces: ").split()))
+ 
+merge_list = Num1 + Num2
+ 
+print(f"The merge List is = {merge_list}")
+ 
+ 
+ 
+ 
+ 
+# 24->Write a program to total sum of list
+ 
+Num = list(map(int,input("Enter numbers separated by spaces: ").split()))
+ 
+total_sum = sum(Num)
+ 
+print(f"Summation of the List is = {total_sum}")
+ 
+ 
+ 
+ 
+ 
+# 25-> write a programme to find common elements two in list
+ 
+Num2 = list(map(int,input("Enter numbers separated by spaces: ").split()))
+Num1 = list(map(int,input("Enter numbers separated by spaces: ").split()))
+common_Num = list(set(Num1) & set(Num2))
+ 
+print(f"The Common Number of {Num1} & {Num2} is = {common_Num}")
