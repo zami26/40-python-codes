@@ -160,3 +160,100 @@ else:
  
 """
  
+#  ------ third commit-----
+
+ 
+# 11.Write a program to find largest number among three number.
+ 
+def find_largest(a,b,c):
+    if a>=b and a>=c:
+        return a
+    elif b>=a and b>=c:
+        return b
+    else:
+        return c
+ 
+ 
+num1 = float(input("Enter the Frst number: = "))
+num2 = float(input("Enter the second number: = "))
+num3 = float(input("Enter the third number: = "))
+ 
+largest = find_largest(num1,num2,num3)
+ 
+print(f"The largest number {num1},{num2} and {num3} is {largest}")
+ 
+ 
+ 
+ 
+ 
+ 
+# 12.Write a program to find the gcd.
+ 
+def mygcd(x,y):
+    while y:
+        x,y = y, x%y
+    return x
+ 
+num1 = int(input("Enter the Frst number:  "))
+num2 = int(input("Enter the second number:  "))
+ 
+result = mygcd(num1,num2)
+ 
+print(f"GCD of {num1} and {num2} is = {result} ")
+ 
+ 
+ 
+ 
+# 13.Write a program to find the lcm.
+ 
+def mygcd(x,y):
+    while y:
+        x,y = y, x%y
+    return x
+ 
+def mylcd(x,y):
+    return abs(x*y) // mygcd(x,y)
+ 
+num1 = int(input("Enter the Frst number:  "))
+num2 = int(input("Enter the second number:  "))
+ 
+result = mylcd(num1,num2)
+ 
+print(f"GCD of {num1} and {num2} is = {result} ")
+ 
+ 
+ 
+ 
+# 14.Write a program to convert Celsius to Fahrenheit.
+ 
+ 
+def cel_to_fahren(c):
+    return (c*9/5)+32
+ 
+ 
+Celsius = float(input("Enter temperature in Celsius: "))
+ 
+fahrenheit = cel_to_fahren(Celsius)
+ 
+ 
+print(f"{Celsius} C is equal to {fahrenheit} F")
+ 
+ 
+ 
+ 
+ 
+# 15.Write a program to generate random number.
+ 
+import random
+def randfloat(x,y):
+    return random.uniform(x,y)   ##int->randint
+ 
+ 
+a = float(input("Enter the lower bound: "))
+b = float(input("Enter the upper bound: "))
+ 
+myRandom = randfloat(a,b)
+ 
+ 
+print(f"The random float number between {a} and {b} is = {myRandom}")
+ 
